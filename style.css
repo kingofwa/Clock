@@ -1,0 +1,500 @@
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-n%E1%BB%81n-background-vector-scaled.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 500px;
+            margin: auto;
+            /* background: rgba(255, 255, 255, 0.9); */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e63946;
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: #e63946;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider img {
+            width: 100%;
+            display: block;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .product-details {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .product-details h2 {
+            font-size: 1.5em;
+            color: #f3f3f3;
+            margin: 10px 0;
+        }
+
+        .product-details p {
+            margin: 5px 0;
+            color: #f3f3f3;
+            font-size: 0.9em;
+        }
+
+        .product-details .price {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .product-details .price .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 10px;
+        }
+
+        .product-details .price .sale-price {
+            font-weight: bold;
+            color: #e63946;
+            font-size: 1.5em;
+        }
+
+        .form-section {
+            margin-top: 20px;
+        }
+
+        .form-section label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #dfe3df;
+            font-size: 0.9em;
+        }
+
+        .form-section input,
+        .form-section textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .form-section button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(45deg, #e63946, #f77f00);
+            border: none;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .form-section button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(45deg, #f77f00, #e63946);
+        }
+
+        select, input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background: linear-gradient(45deg, #e63946, #f77f00);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(45deg, #f77f00, #e63946);
+        }
+
+
+        /* feedback */
+    .product-feedback {
+        margin-top: 10px;
+
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-feedback h2 {
+        /* text-align: center; */
+        font-size: 1.5em;
+        color: #e63946;
+        margin-bottom: 20px;
+    }
+    form h2{
+        /* text-align: center; */
+        font-size: 1.5em;
+        color: #e63946;
+        margin-bottom: 20px;
+
+    }
+
+    .feedback-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feedback-item {
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        background: #f9f9f9;
+    }
+
+    .feedback-stars {
+        color: #FFD700;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .feedback-item p {
+        margin: 0;
+        font-size: 1em;
+        color: #333;
+    }
+
+    .feedback-item strong {
+        color: #e63946;
+    }
+
+    /* style cho ngôi sao */
+    .feedback-stars {
+        color: #FFD700; /* Màu vàng của ngôi sao */
+        font-size: 1.2em;
+        margin-bottom: 5px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .feedback-stars span {
+        display: inline-block;
+        animation: sparkle 2s infinite ease-in-out;
+    }
+
+    /* Tạo hiệu ứng sáng mờ lấp lánh */
+    @keyframes sparkle {
+        0%, 100% {
+            opacity: 0.8;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+
+    /* Hiệu ứng lấp lánh riêng cho từng ngôi sao để tự nhiên hơn */
+    .feedback-stars span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .feedback-stars span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .feedback-stars span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .feedback-stars span:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+
+    .feedback-stars span:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+
+
+    /* Xem thêm */
+    .view-more-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #e63946;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s ease;
+    }
+
+    .view-more-btn:hover {
+        background-color: #f77f00;
+    }
+
+
+    .product-description h3 {
+        font-size: 1.2em;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+
+    .product-description p {
+        margin: 0;
+        font-size: 1em;
+        color: #555;
+    }
+
+    /* style giá gốc và giá sale */
+
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2em;
+    }
+
+    .original-price {
+        color: #999;
+        text-decoration: line-through;
+        font-weight: normal;
+        opacity: 0.8;
+        position: relative;
+        animation: fadeOut 3s infinite;
+    }
+
+    .sale-price {
+        color: #e63946;
+        font-size: 1.8em;
+        font-weight: bold;
+        position: relative;
+        animation: pulse 1.5s infinite;
+    }
+
+    /* Hiệu ứng mờ dần giá gốc */
+    @keyframes fadeOut {
+        0%, 100% {
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.4;
+        }
+    }
+
+    /* Hiệu ứng "phập phồng" giá sale */
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            text-shadow: 0 0 5px rgba(230, 57, 70, 0.5), 0 0 10px rgba(230, 57, 70, 0.4);
+        }
+        50% {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(230, 57, 70, 0.8), 0 0 15px rgba(230, 57, 70, 0.6);
+        }
+    }
+
+    /* style phần chi tiết sản phẩm */
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #f3f3f3 !important;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #e63946;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .preview-details p {
+        margin: 10px 0;
+        font-size: 1em;
+        line-height: 1.6;
+        color: #f3f3f3;
+        position: relative;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .preview-details p::before {
+        content: "✔"; /* Dấu tick bên trái */
+        position: absolute;
+        left: 0;
+        color: #70e639;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+    .product-description {
+        margin-top: 20px;
+        font-size: 1em;
+        line-height: 1.8;
+        color: #333;
+    }
+
+    .product-description::before {
+        margin-right: 5px;
+        color: #e63946;
+        font-size: 1.2em;
+    }
+
+    /* thời gian đếm ngược */
+    .countdown-section h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #e63946;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        animation: pulseGlow 1.5s infinite ease-in-out;
+        position: relative;
+    }
+
+    /* Hiệu ứng phát sáng và chuyển động nhấn mạnh */
+    @keyframes pulseGlow {
+        0%, 100% {
+            text-shadow: 0 0 10px rgba(230, 57, 70, 0.5), 0 0 20px rgba(230, 57, 70, 0.4);
+        }
+        50% {
+            text-shadow: 0 0 20px rgba(230, 57, 70, 0.8), 0 0 40px rgba(230, 57, 70, 0.6);
+        }
+    }
+
+    /* Tạo biểu tượng cảnh báo động */
+    .countdown-section h3::before {
+        content: "⏰ ";
+        color: #f77f00;
+        font-size: 2.2em;
+        position: absolute;
+        top: 42%;
+        transform: translateY(-50%);
+        animation: shake 1.5s infinite ease-in-out;
+        right: -65px;
+    }
+
+    /* Hiệu ứng rung biểu tượng */
+    @keyframes shake {
+        0%, 100% {
+            transform: translate(-10%, -50%);
+        }
+        50% {
+            transform: translate(10%, -50%);
+        }
+    }
+
+
+    .countdown-timer {
+        display: flex;
+        justify-content: center; /* Căn giữa các phần tử */
+        gap: 10px; /* Khoảng cách giữa các khối */
+        font-family: Arial, sans-serif;
+        margin-top: 20px;
+        color: #f3f3f3;
+    }
+
+    .countdown-timer span {
+        background-color: #e63946; /* Màu nền nổi bật */
+        color: white; /* Màu chữ */
+        font-size: 1.5em; /* Tăng kích thước chữ */
+        font-weight: bold;
+        padding: 10px 15px; /* Kích thước ô */
+        border-radius: 10px; /* Góc bo tròn */
+        display: inline-block;
+        min-width: 60px; /* Đảm bảo kích thước ô đều */
+        text-align: center; /* Căn giữa chữ */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+        position: relative; /* Để thêm hiệu ứng động */
+    }
+
+    .countdown-timer span::after {
+        content: ""; /* Hiệu ứng sáng */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.3);
+        opacity: 0;
+        animation: glow 1.5s infinite; /* Hiệu ứng phát sáng */
+    }
+
+    @keyframes glow {
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+    }
+
+    .countdown-timer span + span {
+        margin-left: 5px; /* Khoảng cách giữa các phần tử */
+    }
+
+    .countdown-timer span:nth-child(2n) {
+        background-color: #f77f00; /* Xen kẽ màu cam */
+    }
+
+    .countdown-timer span:nth-child(4n) {
+        background-color: #ffd700; /* Xen kẽ màu vàng */
+    }
+
+    .countdown-timer span ~ span::after {
+        animation-delay: 0.5s; /* Các ô phát sáng xen kẽ */
+    }
+
+    .countdown-timer span {
+        background-color: #f77f00;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 2px;
+        display: inline-block;
+        min-width: 40px;
+        text-align: center;
+    }

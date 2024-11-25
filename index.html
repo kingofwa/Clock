@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng Hồ Thụy Sỹ </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Đồng Hồ Cao Cấp</h1>
+        <!-- Slider Section -->
+        <div class="slider">
+            <div class="slides">
+                <img src="https://down-vn.img.susercontent.com/file/d8166a8b42caa43c84c42bb9e1a354af" alt="Đồng Hồ 1">
+                <img src="https://th.bing.com/th/id/OIP.IhPU2z_gQAyTg9M0EU_09AHaHa?rs=1&pid=ImgDetMain" alt="Đồng Hồ 2">
+                <img src="https://www.telepolis.pl/images/2022/05/maxcom-fw54-iron-przod.jpg" alt="Đồng Hồ 3">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h2>Đồng Hồ Thụy Sỹ</h2>
+            <p>Đồng hồ thời trang cao cấp, chống nước, dây da cao cấp.</p>
+            <p class="price">
+                <span class="original-price">4,000,000 VND</span>
+                <span class="sale-price">2,000,000 VND</span>
+            </p>
+             <!-- Nút xem thêm -->
+            <button class="view-more-btn">Xem Thêm</button>
+            <!-- Chi tiết sản phẩm -->
+            <div class="product-description" style="display: none;">
+                <h3>Chi Tiết Sản Phẩm</h3>
+                <div class="preview-details">
+                    <p><strong>Thương hiệu:</strong> Rolex</p>
+                    <p><strong>Xuất xứ:</strong> Thụy Sỹ</p>
+                    <p><strong>Chất liệu:</strong> Dây da cao cấp, chống nước</p>
+                    <p><strong>Bảo hành:</strong> 2 năm</p>
+                    <p><strong>Đường kính mặt:</strong> 42mm</p>
+                </div>
+            </div>
+        </div>
+
+        <br><hr>
+        <div class="product-feedback">
+            <h2>Đánh Giá Từ Khách Hàng</h2>
+            <div class="feedback-list">
+                <div class="feedback-item">
+                    <div class="feedback-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p><strong>Nguyễn Văn An:</strong> Sản phẩm rất đẹp, chất lượng vượt mong đợi. Đóng gói cẩn thận!</p>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p><strong>Trần Thị Kiều Linh:</strong> Đồng hồ rất sang trọng, nhìn y như hình. Rất hài lòng!</p>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p><strong>Lê Văn Cát Hỷ:</strong> Giao hàng nhanh, nhân viên tư vấn nhiệt tình. Mua sẽ ủng hộ tiếp.</p>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p><strong>Phạm Thị Duyên:</strong> Sản phẩm tốt, xứng đáng với giá tiền. Đánh giá 5 sao!</p>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-stars">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p><strong>Hoàng Văn Em:</strong> Chất lượng vượt mong đợi, rất thích và sẽ giới thiệu bạn bè!</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="countdown-section">
+            <h3>Khuyến Mãi Kết Thúc Sau</h3>
+            <div class="countdown-timer">
+                <span id="hours">00</span> giờ
+                <span id="minutes">00</span> phút
+                <span id="seconds">00</span> giây
+            </div>
+        </div>
+
+        <br>
+        <form action="#" method="POST" class="form-section">
+            <h2>Đặt Hàng Tại Đây</h2>
+            <label for="name">Họ và Tên</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+            <label for="phone">Số Điện Thoại</label>
+            <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" required 
+                pattern="^\d{10,11}$" title="Số điện thoại phải gồm 10 hoặc 11 chữ số">
+
+            <h2>Địa Chỉ Nhận Hàng</h2>
+            <select id="city" required>
+                <option value="" selected>Chọn Tỉnh/Thành Phố</option>           
+            </select>
+            <select id="district" required>
+                <option value="" selected>Chọn quận huyện</option>
+            </select>
+            <select id="ward" required>
+                <option value="" selected>Chọn phường xã</option>
+            </select>
+            <input type="text" id="address" name="address" placeholder="Nhập số nhà và tên đường" required>
+            <label for="address">Ghi chú</label>
+            <textarea id="address" name="address" placeholder="Ghi chú khác nếu có" rows="3" ></textarea>
+
+            <button type="submit">Đặt Hàng Ngay</button>
+        </form>
+    </div>
+
+    <script src="index.js">
+	</script>
+</body>
+</html>
